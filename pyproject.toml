@@ -1,7 +1,15 @@
 [project]
 name = "numerical-optimization"
 version = "0.1.0"
-description = "Add your description here"
+description = "Environment for assignments in the numerical-optimization course on DIKU 2026"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "numpy>=2.4.2",
+    "scipy>=1.17.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.1.0",
+]
