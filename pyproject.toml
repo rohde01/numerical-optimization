@@ -5,6 +5,7 @@ description = "Environment for assignments in the numerical-optimization course 
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "matplotlib>=3.10.8",
     "numpy>=2.4.2",
     "scipy>=1.17.0",
 ]
