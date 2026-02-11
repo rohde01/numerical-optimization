@@ -62,9 +62,8 @@ def Hf3(x,epsilon=0.1,alpha=100):
     
     dgx=epsilon/(epsilon+fx)**2
     d2gx=-2*epsilon/(epsilon+fx)**3
-    g=dgx*dfx
     
-    return Hdx*d2gx-np.outer(g,g)
+    return Hdx*dgx+d2gx*np.outer(dfx,dfx)
 
 def df4(x, q=1000):
     return 2*h(x,q)*dh(x,q) - 200*h(-x,q)*dh(-x,q)
