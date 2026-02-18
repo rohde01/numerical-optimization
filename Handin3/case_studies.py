@@ -54,16 +54,13 @@ def df3(x,epsilon=0.1,alpha=100):
     dgx = epsilon/(epsilon+fx)**2
     return dgx*dfx
     
-
 def Hf3(x,epsilon=0.1,alpha=100):
     fx=f1(x,alpha)
     dfx=df1(x,alpha)
     Hdx=Hf1(x,alpha)
-    
     dgx=epsilon/(epsilon+fx)**2
     d2gx=-2*epsilon/(epsilon+fx)**3
-    
-    return Hdx*dgx+d2gx*np.outer(dfx,dfx)
+    return Hdx*dgx+d2gx*np.outer(dfx,dfx) #this line
 
 def df4(x, q=1000):
     return 2*h(x,q)*dh(x,q) - 200*h(-x,q)*dh(-x,q)
